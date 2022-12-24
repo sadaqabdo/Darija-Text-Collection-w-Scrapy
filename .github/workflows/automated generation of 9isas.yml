@@ -29,4 +29,5 @@ jobs:
           git config --global user.email 'sadaqabdo@protonmail.com'
           git lfs track "9isas.csv"
           git add .gitattributes
+          git commit -m "Automated Gen"
           git push
