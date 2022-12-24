@@ -25,7 +25,7 @@ jobs:
           ls
           git config --global user.name 'sadaq'
           git config --global user.email 'sadaqabdo@protonmail.com'
-          git add 9isas.csv
+          git add -f 9isas.csv
           git commit -m "Automated generation of 9isas"
           git push
 
