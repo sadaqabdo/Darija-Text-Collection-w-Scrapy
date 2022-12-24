@@ -23,7 +23,7 @@ jobs:
       run: scrapy runspider spiders/SpiderLover.py -o 9isas.csv
     - name: Commit 9isas.csv
       run: |
-          git pull origin main -r
+          git pull origin automated -r
           git config --global user.name 'sadaq'
           git config --global user.email 'sadaqabdo@protonmail.com'
           git lfs track "9isas.csv"
