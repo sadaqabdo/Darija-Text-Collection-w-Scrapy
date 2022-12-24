@@ -18,13 +18,14 @@ jobs:
       run: |
         python -m pip install --upgrade pip
         pip install -r requirements.txt
+    - name: Scrape Data
         scrapy runspider spiders/SpiderLover.py -o 9isas.csv
     - name: Commit 9isas.csv
       run: |
           ls
           git config --global user.name 'sadaq'
           git config --global user.email 'sadaqabdo@protonmail.com'
-          git add .
+          git add 9isas.csv
           git commit -m "Automated generation of 9isas"
           git push
 
