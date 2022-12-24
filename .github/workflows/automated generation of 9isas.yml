@@ -23,6 +23,7 @@ jobs:
       run: |
           git config --global user.name 'sadaq'
           git config --global user.email 'sadaqabdo@protonmail.com'
+          git add .
           git commit -am "Automated generation of 9isas"
           git push
 
