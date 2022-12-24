@@ -17,6 +17,7 @@ jobs:
     - name: Install dependencies
       run: |
         python -m pip install --upgrade pip
+        git lfs install
         pip install -r requirements.txt
     - name: Scrape Data
       run: scrapy runspider spiders/SpiderLover.py -o 9isas.csv
@@ -26,6 +27,6 @@ jobs:
           git pull
           git config --global user.name 'sadaq'
           git config --global user.email 'sadaqabdo@protonmail.com'
-          git add -f 9isas.csv
-          git commit -m "Automated generation of 9isas"
+          git lfs track "9isas.csv"
+          git add .gitattributes
           git push
