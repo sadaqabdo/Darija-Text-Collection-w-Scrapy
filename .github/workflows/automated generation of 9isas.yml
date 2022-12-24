@@ -23,11 +23,11 @@ jobs:
       run: scrapy runspider spiders/SpiderLover.py -o 9isas.csv
     - name: Commit 9isas.csv
       run: |
-          ls
           git pull
+          rm 9isas.csv
           git config --global user.name 'sadaq'
           git config --global user.email 'sadaqabdo@protonmail.com'
           git lfs track "9isas.csv"
-          git -f add .gitattributes 9isas.csv
+          git add .gitattributes 9isas.csv
           git commit -m "Automated Gen"
           git push
