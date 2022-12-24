@@ -25,7 +25,7 @@ jobs:
       run: |
           git pull
           git lfs pull
-          rm 9isas.csv
+          rm 9isas.csv .gitattributes
           git config --global user.name 'sadaq'
           git config --global user.email 'sadaqabdo@protonmail.com'
           git lfs track "9isas.csv"
