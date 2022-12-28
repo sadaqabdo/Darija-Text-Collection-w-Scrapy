@@ -22,7 +22,7 @@ jobs:
         git pull origin main -r
         rm -rf 9isas.csv
     - name: Scrape Data
-      run: scrapy runspider spiders/SpiderLover.py -O 9isas.csv --nolog
+      run: scrapy runspider spiders/SpiderLover.py -O 9isas.csv
     - name: Commit 9isas.csv
       run: |
           git config --global user.name 'sadaq'
