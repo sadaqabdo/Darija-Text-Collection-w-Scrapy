@@ -19,7 +19,7 @@ jobs:
         python -m pip install --upgrade pip
         git lfs install
         pip install -r requirements.txt
-        git pull origin automated -r
+        git pull origin main -r
         rm -rf 9isas.csv
     - name: Scrape Data
       run: scrapy runspider spiders/SpiderLover.py -O 9isas.csv
