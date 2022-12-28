@@ -20,7 +20,7 @@ jobs:
         git lfs install
         pip install -r requirements.txt
     - name: Scrape Data
-      run: scrapy runspider spiders/SpiderLover.py -o 9isas.csv
+      run: scrapy runspider spiders/SpiderLover.py -O 9isas.csv
     - name: Commit 9isas.csv
       run: |
           git pull origin automated -r
