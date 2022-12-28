@@ -17,7 +17,9 @@ class SpiderLover(scrapy.Spider):
     #next_page        
         next_pageparts = response.css('#pager > a').xpath('@href').extract()
         if next_pageparts is not None:
-            next_pageparts = response.urljoin(next_pageparts)
+            url_str = ' '.join(map(str, next_pageparts))
+
+            next_pageparts = response.urljoin(url_str)
             yield scrapy.Request(next_pageparts , callback=self.parse_stories_parts)
     #extracting text
     def parse_stories_text(self, response):
